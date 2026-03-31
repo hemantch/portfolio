@@ -54,7 +54,7 @@ const CERTS = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-24 px-6 bg-[#0F0F18]">
+    <section id="certifications" className="py-24 px-6 bg-[#0A0A0F]">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export default function Certifications() {
           <span className="font-inter text-accent text-xs tracking-[0.25em] uppercase">
             Credentials
           </span>
-          <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mt-3">
+          <h2 className="font-syne font-black text-white mt-3" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
             Certifications
           </h2>
         </motion.div>
@@ -81,20 +81,20 @@ export default function Certifications() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="group relative overflow-hidden rounded-xl"
             >
-              <div className="relative bg-[#0A0A0F] border border-white/5 group-hover:border-highlight/40 rounded-xl p-6 h-full transition-all duration-300">
+              <div className="relative bg-white/5 border border-white/10 group-hover:border-[#00D4FF]/30 rounded-xl p-6 h-full transition-all duration-300">
                 {/* Gold shimmer sweep */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden rounded-xl">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-highlight/8 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 </div>
 
-                <div className="text-white/30 group-hover:text-highlight transition-colors duration-300 mb-4">
+                <div className="text-[#00D4FF]/60 group-hover:text-highlight transition-colors duration-300 mb-4">
                   {cert.icon}
                 </div>
 
-                <h3 className="font-syne font-bold text-white text-sm leading-snug">
+                <h3 className="font-inter font-semibold text-white text-sm leading-snug">
                   {cert.name}
                 </h3>
-                <p className="font-inter text-white/35 text-xs mt-2">{cert.org}</p>
+                <p className="font-inter text-sm text-[#94A3B8] mt-2">{cert.org}</p>
 
                 {/* Corner badge dot */}
                 <div className="absolute top-4 right-4 w-1.5 h-1.5 rounded-full bg-highlight/50 group-hover:bg-highlight group-hover:shadow-[0_0_8px_rgba(245,166,35,0.6)] transition-all duration-300" />

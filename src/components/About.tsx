@@ -45,14 +45,14 @@ export default function About() {
           <span className="font-inter text-accent text-xs tracking-[0.25em] uppercase">
             About Me
           </span>
-          <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mt-3">
-            Who I Am
+          <h2 className="font-syne font-black text-white mt-3" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
+            About Me
           </h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
-          {/* Photo with circular frame + spinning conic ring */}
+          {/* Photo with circular frame */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -60,26 +60,8 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="relative flex justify-center"
           >
-            {/* Spinning conic ring */}
-            <div
-              className="absolute rounded-full"
-              style={{
-                width:        "calc(100% + 6px)",
-                height:       "calc(100% + 6px)",
-                top:          "-3px",
-                left:         "-3px",
-                background:   "conic-gradient(from 0deg, #00D4FF, rgba(0,212,255,0.15), #00D4FF, rgba(0,212,255,0.15), #00D4FF)",
-                borderRadius: "9999px",
-                animation:    "spin 6s linear infinite",
-              }}
-            />
-            {/* Ambient glow */}
-            <div
-              className="absolute inset-0 rounded-full -z-10"
-              style={{ background: "rgba(0,212,255,0.12)", filter: "blur(32px)" }}
-            />
             {/* Photo */}
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-[#0A0A0F]">
+            <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 border-[#00D4FF]/40 shadow-[0_0_30px_rgba(0,212,255,0.15)]">
               <Image
                 src="/1725520706842.jpeg"
                 alt="Hemanth Chappa"
@@ -90,13 +72,6 @@ export default function About() {
             </div>
           </motion.div>
 
-          <style>{`
-            @keyframes spin {
-              from { transform: rotate(0deg); }
-              to   { transform: rotate(360deg); }
-            }
-          `}</style>
-
           {/* Bio + stats */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
@@ -105,17 +80,20 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <p className="font-inter text-white/65 text-lg leading-relaxed">
-              Results-driven SRE specialising in cloud infrastructure, platform
-              engineering and distributed systems. Experienced in
-              high-availability architecture, observability, FinOps and
-              mentoring teams to build cloud competency.
+              I&apos;ve spent 9 years doing the thing most people take
+              for granted — making sure the infrastructure just works.
+              From AWS support to platform engineering at JPMorganChase,
+              I&apos;ve built systems that stay up when everything else is
+              falling apart. When I&apos;m not thinking about uptime, I&apos;m
+              travelling somewhere new or in the gym. Balance matters
+              — in systems and in life.
             </p>
 
             <div ref={ref} className="grid grid-cols-3 gap-4 mt-10">
               {STATS.map((s, i) => (
                 <div
                   key={i}
-                  className="text-center p-5 rounded-xl bg-[#0F0F18] border border-white/5 hover:border-accent/20 transition-colors duration-300"
+                  className="text-center p-5 rounded-xl bg-white/5 border border-white/5 hover:border-accent/20 transition-colors duration-300"
                 >
                   <div className="font-syne font-extrabold text-3xl text-accent">
                     <Counter target={s.value} suffix={s.suffix} active={inView} />

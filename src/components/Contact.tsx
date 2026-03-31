@@ -18,8 +18,8 @@ export default function Contact() {
   };
 
   const inputClass = [
-    "font-inter w-full bg-[#0A0A0F] border border-white/10 rounded-lg px-4 py-3",
-    "text-white placeholder-white/20 text-sm",
+    "font-inter w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3",
+    "text-white placeholder-[#94A3B8] text-sm",
     "focus:outline-none focus:border-accent transition-colors duration-200",
   ].join(" ");
 
@@ -36,10 +36,10 @@ export default function Contact() {
           <span className="font-inter text-accent text-xs tracking-[0.25em] uppercase">
             Let&apos;s Connect
           </span>
-          <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mt-3">
+          <h2 className="font-syne font-black text-white mt-3" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
             Get In Touch
           </h2>
-          <p className="font-inter text-white/40 mt-4 text-base">
+          <p className="font-inter text-[#94A3B8] mt-4 text-base">
             Open to interesting conversations and opportunities
           </p>
         </motion.div>
@@ -49,11 +49,11 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-[#0F0F18] border border-white/5 rounded-2xl p-8"
+          className="bg-white/5 border border-white/10 rounded-2xl p-8"
         >
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="font-inter block text-white/50 text-xs mb-2 uppercase tracking-widest">
+              <label className="font-inter block text-[#94A3B8] text-sm mb-2 uppercase tracking-widest">
                 Name
               </label>
               <input
@@ -68,7 +68,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="font-inter block text-white/50 text-xs mb-2 uppercase tracking-widest">
+              <label className="font-inter block text-[#94A3B8] text-sm mb-2 uppercase tracking-widest">
                 Email
               </label>
               <input
@@ -83,7 +83,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="font-inter block text-white/50 text-xs mb-2 uppercase tracking-widest">
+              <label className="font-inter block text-[#94A3B8] text-sm mb-2 uppercase tracking-widest">
                 Message
               </label>
               <textarea
@@ -101,7 +101,7 @@ export default function Contact() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="font-inter font-semibold w-full py-3.5 bg-accent text-black rounded-lg hover:bg-accent/85 transition-colors duration-200 text-sm"
+              className="font-inter font-semibold w-full py-3 border border-[#00D4FF] text-[#00D4FF] bg-transparent rounded-lg hover:bg-[#00D4FF] hover:text-[#0A0A0F] transition-colors duration-200 cursor-pointer text-sm"
             >
               {sent ? "✓ Message Sent!" : "Send Message"}
             </motion.button>

@@ -23,6 +23,8 @@ https://hemanthchappa.com
 - @fontsource/syne (400, 600, 700, 800)
 - @fontsource/inter (400, 500, 600)
 - react-intersection-observer
+- three + @types/three (Three.js for DottedSurface)
+- clsx + tailwind-merge (for cn() utility)
 - Static export for GitHub Pages
 
 ## Design System
@@ -43,7 +45,7 @@ src/
     globals.css — Tailwind v4 @theme tokens and base styles
   components/
     Navbar.tsx — transparent top, blur on scroll
-    Hero.tsx — particle network canvas, typewriter
+    Hero.tsx — DottedSurface Three.js wave dot grid background, typewriter
     About.tsx — split layout, photo with spinning
       cyan ring, animated stat counters
     Skills.tsx — hexagonal grid, cyan glow on hover
@@ -51,6 +53,11 @@ src/
       cards, glowing centre line
     Certifications.tsx — badge grid, amber shimmer
     Contact.tsx — dark card form, cyan focus states
+  components/ui/
+    dotted-surface.tsx — Three.js animated wave dot grid, cyan dots
+      (#00D4FF), dark background (#0A0A0F), used as Hero background
+  lib/
+    utils.ts — cn() helper using clsx + tailwind-merge
 
 ## Photo
 - File: /public/1725520706842.jpeg
@@ -77,11 +84,6 @@ next.config.ts has:
   in Porkbun DNS with 4 A records + CNAME
 
 ## Pending Design Tasks
-- Hero h1 "Hemanth Chappa" font needs refinement
-  - Should be matte, flat, heavy, Swiss design feel
-  - No gradients, glows or shine effects
-  - font-syne font-black #F0F0F0
-  - letterSpacing: -0.04em, lineHeight: 0.9
 - Overall design open to creative refinement
 - Personal touch / hobbies section to be
   revisited later

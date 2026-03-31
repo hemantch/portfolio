@@ -56,7 +56,7 @@ export default function Experience() {
           <span className="font-inter text-accent text-xs tracking-[0.25em] uppercase">
             My Journey
           </span>
-          <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mt-3">
+          <h2 className="font-syne font-black text-white mt-3" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
             Work Experience
           </h2>
         </motion.div>
@@ -85,9 +85,9 @@ export default function Experience() {
                     transition={{ duration: 0.6, delay: i * 0.1 }}
                     className={`w-full md:w-[calc(50%-2rem)] ${isLeft ? "md:mr-auto" : "md:ml-auto"}`}
                   >
-                    <div className="bg-[#0F0F18] border border-white/5 hover:border-accent/25 rounded-xl p-6 transition-colors duration-300">
+                    <div className="bg-white/5 border border-white/10 hover:border-accent/25 rounded-xl p-6 transition-colors duration-300">
                       {exp.current && (
-                        <span className="font-inter inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-accent/10 text-accent text-xs rounded border border-accent/20 mb-3">
+                        <span className="font-inter inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#00D4FF]/10 text-[#00D4FF] text-xs rounded border border-[#00D4FF]/30 mb-3">
                           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                           Current Role
                         </span>
@@ -99,13 +99,13 @@ export default function Experience() {
                         {exp.company}
                       </p>
                       {exp.location && (
-                        <p className="font-inter text-white/35 text-xs mt-1">{exp.location}</p>
+                        <p className="font-inter text-[#94A3B8] text-sm mt-1">{exp.location}</p>
                       )}
-                      <p className="font-inter text-white/35 text-xs mt-0.5">{exp.period}</p>
+                      <p className="font-inter text-[#94A3B8] text-sm mt-0.5">{exp.period}</p>
 
                       <ul className="mt-4 space-y-2">
                         {exp.highlights.map((h, j) => (
-                          <li key={j} className="font-inter text-white/55 text-sm flex items-start gap-2">
+                          <li key={j} className="font-inter text-white/80 text-sm flex items-start gap-2">
                             <span className="text-accent shrink-0 mt-0.5">▸</span>
                             {h}
                           </li>

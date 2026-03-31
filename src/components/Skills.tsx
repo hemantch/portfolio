@@ -12,7 +12,7 @@ const HEX = "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-[#0F0F18]">
+    <section id="skills" className="py-24 px-6 bg-[#0A0A0F]">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export default function Skills() {
           <span className="font-inter text-accent text-xs tracking-[0.25em] uppercase">
             What I Know
           </span>
-          <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mt-3">
+          <h2 className="font-syne font-black text-white mt-3" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
             Skills &amp; Expertise
           </h2>
         </motion.div>
@@ -46,10 +46,10 @@ export default function Skills() {
               />
               {/* Hex cell */}
               <div
-                className="relative w-28 h-32 flex items-center justify-center bg-[#0A0A0F] border border-accent/15 group-hover:border-accent group-hover:bg-accent/10 transition-all duration-300 cursor-default"
+                className="relative w-28 h-32 flex items-center justify-center bg-[#00D4FF]/5 border-2 border-[#00D4FF]/30 group-hover:border-[#00D4FF]/70 group-hover:bg-[#00D4FF]/10 group-hover:scale-105 transition-all duration-200 cursor-default"
                 style={{ clipPath: HEX }}
               >
-                <span className="font-syne font-bold text-white/60 group-hover:text-accent text-xs sm:text-sm text-center px-3 leading-tight transition-colors duration-300 select-none">
+                <span className="font-inter font-medium text-white group-hover:text-accent text-xs sm:text-sm text-center px-3 leading-tight transition-colors duration-200 select-none">
                   {skill}
                 </span>
               </div>
