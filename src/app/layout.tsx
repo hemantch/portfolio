@@ -7,6 +7,7 @@ import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 import "./globals.css";
+import AskMe from "@/components/AskMe";
 
 export const metadata: Metadata = {
   title: "Hemanth Chappa | Site Reliability Engineer",
@@ -19,7 +20,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="antialiased">
-      <body className="bg-[#0A0A0F] text-white">{children}</body>
+      <body className="bg-[#0A0A0F] text-white">
+        {children}
+        <AskMe />
+      </body>
     </html>
   );
 }

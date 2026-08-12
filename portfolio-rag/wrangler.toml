@@ -1,0 +1,19 @@
+name = "portfolio-rag"
+main = "worker/src/index.ts"
+compatibility_date = "2026-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+kv_namespaces = [
+  { binding = "CACHE", id = "978045d79eb045c280acd97fa92a8e00" }
+]
+
+[[vectorize]]
+binding = "PORTFOLIO_INDEX"
+index_name = "portfolio-index"
+
+[ai]
+binding = "AI"
+
+[[analytics_engine_datasets]]
+binding = "PORTFOLIO_ANALYTICS"
+dataset = "portfolio_analytics"

@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-rag",
+  "version": "1.0.0",
+  "description": "RAG chat API for hemanthchappa.com, running on Cloudflare Workers",
+  "main": "worker/src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "index": "tsx indexer/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260812.1",
+    "@types/node": "^26.2.0",
+    "dotenv": "^17.4.2",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.122.0"
+  }
+}
